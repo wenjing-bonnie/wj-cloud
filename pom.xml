@@ -1,28 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.wj</groupId>
-  <artifactId>wj-cloud</artifactId>
-  <packaging>pom</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <modules>
-    <module>wj-cloud-eureka-server</module>
-    <module>wj-cloud-config</module>
-  </modules>
+    <groupId>org.wj</groupId>
+    <artifactId>wj-cloud</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>wj-cloud-eureka-server</module>
+        <module>wj-cloud-config</module>
+    </modules>
 
-  <name>wj-cloud</name>
+    <name>wj-cloud</name>
+<!--不需要通过这种方式引入，在dependencyManagement中的spring-boot-dependencies已经包含该功能-->
+<!--    <parent>-->
+<!--        <artifactId>spring-boot-starter-parent</artifactId>-->
+<!--        <groupId>org.springframework.boot</groupId>-->
+<!--        <version>2.5.0</version>-->
+<!--    </parent>-->
 
+<!--
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        &lt;!&ndash;spring boot 注解&ndash;&gt;
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>2.2.6.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
 
-  <dependencies>
-<!--spring boot 注解-->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-autoconfigure</artifactId>
-      <version>2.2.6.RELEASE</version>
-    </dependency>
+    </dependencies>-->
+    <!--导入多个模块-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <!--SpringCloud依赖，一定放到DependencyManager，起到管理版本作用-->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.2.6.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
-  </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.2.6.RELEASE</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>

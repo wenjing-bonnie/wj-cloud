@@ -1,4 +1,4 @@
-package org.wj.eureka.server;
+package org.wj.cloud;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;

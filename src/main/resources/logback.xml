@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--scan:配置文件如果发生改变，将会被重新加载；scanPeriod:配置文件是否有修改的时间间隔-->
+<configuration scan="true" scanPeriod="60 seconds">
+    <!--日志输出路径-->
+    <property name="LOG_PATH" value="../../logs/wj-cloud"/>
+    <!--输出到控制台-->
+    <appender name="stdout" class="Console">
+
+    </appender>
+
+</configuration>
