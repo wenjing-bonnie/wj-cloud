@@ -1,4 +1,4 @@
-package org.wj;
+package org.wj.eureka.server;
 
 /**
  * Hello world!

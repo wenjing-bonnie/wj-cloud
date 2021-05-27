@@ -1,4 +1,4 @@
-package org.wj;
+package org.wj.eureka.server;
 
 import static org.junit.Assert.assertTrue;
 
