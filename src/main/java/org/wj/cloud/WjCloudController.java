@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class WjCloudController {
     @ResponseBody
-    @RequestMapping("/hello")
+    @RequestMapping("/")
     public String helloWjCloud() {
-        return "Hello wj cloud";
+        return "Hello wj cloud! Come on";
     }
 }
