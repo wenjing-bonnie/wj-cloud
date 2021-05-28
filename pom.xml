@@ -15,35 +15,42 @@
 
     <name>wj-cloud</name>
 <!--不需要通过这种方式引入，在dependencyManagement中的spring-boot-dependencies已经包含该功能-->
-<!--    <parent>-->
-<!--        <artifactId>spring-boot-starter-parent</artifactId>-->
-<!--        <groupId>org.springframework.boot</groupId>-->
-<!--        <version>2.5.0</version>-->
-<!--    </parent>-->
+    <parent>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <groupId>org.springframework.boot</groupId>
+        <version>2.5.0</version>
+    </parent>
 
-<!--
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        &lt;!&ndash;spring boot 注解&ndash;&gt;
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+        </dependency>
+        <!--spring boot 注解-->
+<!--        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
             <version>2.2.6.RELEASE</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
         </dependency>
 
-    </dependencies>-->
+    </dependencies>
     <!--导入多个模块-->
-    <dependencyManagement>
+<!--    <dependencyManagement>
         <dependencies>
             <dependency>
-                <!--SpringCloud依赖，一定放到DependencyManager，起到管理版本作用-->
+                &lt;!&ndash;SpringCloud依赖，一定放到DependencyManager，起到管理版本作用&ndash;&gt;
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>2.2.6.RELEASE</version>
@@ -51,7 +58,7 @@
                 <scope>import</scope>
             </dependency>
         </dependencies>
-    </dependencyManagement>
+    </dependencyManagement>-->
 
     <build>
         <plugins>

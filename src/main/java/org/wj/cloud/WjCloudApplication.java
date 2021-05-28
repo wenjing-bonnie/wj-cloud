@@ -4,7 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Hello world!
+ * Created by wenjing.liu on 2021/5/27 in J1.
+ *
+ * @author wenjing.liu
  */
 @SpringBootApplication
 public class WjCloudApplication {
