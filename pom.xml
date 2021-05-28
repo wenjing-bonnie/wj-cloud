@@ -4,41 +4,25 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <name>wj-cloud</name>
     <groupId>org.wj</groupId>
-    <artifactId>wj-cloud</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>wj-cloud-1</artifactId>
     <version>1.0-SNAPSHOT</version>
-   <!--含有的所有module-->
-    <modules>
-        <module>wj-cloud-eureka-server</module>
-        <module>wj-cloud-config</module>
-    </modules>
+    <packaging>jar</packaging>
+    <name>wj-cloud-1</name>
 
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
         <groupId>org.springframework.boot</groupId>
         <version>2.5.0</version>
     </parent>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
-    <!--导入多个模块-->
-<!--    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                &lt;!&ndash;SpringCloud依赖，一定放到DependencyManager，起到管理版本作用&ndash;&gt;
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.2.6.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>-->
+
 
     <build>
         <plugins>
@@ -49,4 +33,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
