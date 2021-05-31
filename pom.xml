@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.wj</groupId>
-    <artifactId>wj-cloud-1</artifactId>
+    <artifactId>wj-cloud</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>wj-cloud-1</name>
+    <name>wj-cloud</name>
 
     <!--Spring boot-->
     <parent>
@@ -23,7 +23,6 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
-
 
     <build>
         <plugins>
