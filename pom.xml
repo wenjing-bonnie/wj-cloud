@@ -4,11 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.wj</groupId>
+    <groupId>org.wj.cloud</groupId>
     <artifactId>wj-cloud</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <!--当添加子module的时候，此时的packing自动变为pom-->
+    <packaging>pom</packaging>
     <name>wj-cloud</name>
+    <modules>
+        <module>wj-cloud-common</module>
+    </modules>
+
 
     <!--Spring boot-->
     <parent>

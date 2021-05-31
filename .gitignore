@@ -1,5 +1,6 @@
 # Default ignored files
 /.idea/*
 /target/*
+wj-cloud-common/target/*
 wj-cloud-config/target/*
 wj-cloud-eureka-server/target/*
